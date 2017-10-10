@@ -1,0 +1,22 @@
+//
+//  UserDetails+CoreDataClass.h
+//  DemoApp
+//
+//  Created by Nitesh Meshram on 10/10/17.
+//  Copyright © 2017 V2Solutions. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
+
+@class Message;
+
+NS_ASSUME_NONNULL_BEGIN
+
+@interface UserDetails : NSManagedObject
+
+@end
+
+NS_ASSUME_NONNULL_END
+
+#import "UserDetails+CoreDataProperties.h"
