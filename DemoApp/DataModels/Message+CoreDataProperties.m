@@ -2,7 +2,7 @@
 //  Message+CoreDataProperties.m
 //  DemoApp
 //
-//  Created by Nitesh Meshram on 10/10/17.
+//  Created by Nitesh Meshram on 10/11/17.
 //  Copyright © 2017 V2Solutions. All rights reserved.
 //
 
@@ -14,11 +14,11 @@
 	return [[NSFetchRequest alloc] initWithEntityName:@"Message"];
 }
 
+@dynamic dateTime;
 @dynamic id;
 @dynamic messageDescription;
-@dynamic dateTime;
-@dynamic senderId;
 @dynamic receiverId;
+@dynamic senderId;
 @dynamic user;
 
 @end

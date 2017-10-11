@@ -16,10 +16,13 @@
 		003F8F0C1F8CEE42004BC936 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 003F8F0A1F8CEE42004BC936 /* LaunchScreen.storyboard */; };
 		003F8F171F8CEE43004BC936 /* DemoAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 003F8F161F8CEE43004BC936 /* DemoAppTests.m */; };
 		003F8F221F8CEE43004BC936 /* DemoAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 003F8F211F8CEE43004BC936 /* DemoAppUITests.m */; };
-		003F8F381F8D012C004BC936 /* UserDetails+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 003F8F311F8D012C004BC936 /* UserDetails+CoreDataClass.m */; };
-		003F8F391F8D012C004BC936 /* UserDetails+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 003F8F331F8D012C004BC936 /* UserDetails+CoreDataProperties.m */; };
-		003F8F3A1F8D012C004BC936 /* Message+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 003F8F351F8D012C004BC936 /* Message+CoreDataClass.m */; };
-		003F8F3B1F8D012C004BC936 /* Message+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 003F8F371F8D012C004BC936 /* Message+CoreDataProperties.m */; };
+		003F8F4C1F8DE926004BC936 /* ChatTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 003F8F4A1F8DE926004BC936 /* ChatTableViewCell.m */; };
+		003F8F4D1F8DE926004BC936 /* ChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 003F8F4B1F8DE926004BC936 /* ChatTableViewCell.xib */; };
+		003F8F561F8E37AA004BC936 /* UserDetails+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 003F8F4F1F8E37AA004BC936 /* UserDetails+CoreDataClass.m */; };
+		003F8F571F8E37AA004BC936 /* UserDetails+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 003F8F511F8E37AA004BC936 /* UserDetails+CoreDataProperties.m */; };
+		003F8F581F8E37AA004BC936 /* Message+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 003F8F531F8E37AA004BC936 /* Message+CoreDataClass.m */; };
+		003F8F591F8E37AA004BC936 /* Message+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 003F8F551F8E37AA004BC936 /* Message+CoreDataProperties.m */; };
+		003F8F601F8E3DC8004BC936 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 003F8F5F1F8E3DC8004BC936 /* DataManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,14 +60,19 @@
 		003F8F1D1F8CEE43004BC936 /* DemoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		003F8F211F8CEE43004BC936 /* DemoAppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoAppUITests.m; sourceTree = "<group>"; };
 		003F8F231F8CEE43004BC936 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		003F8F301F8D012C004BC936 /* UserDetails+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UserDetails+CoreDataClass.h"; path = "DataModels/UserDetails+CoreDataClass.h"; sourceTree = "<group>"; };
-		003F8F311F8D012C004BC936 /* UserDetails+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UserDetails+CoreDataClass.m"; path = "DataModels/UserDetails+CoreDataClass.m"; sourceTree = "<group>"; };
-		003F8F321F8D012C004BC936 /* UserDetails+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UserDetails+CoreDataProperties.h"; path = "DataModels/UserDetails+CoreDataProperties.h"; sourceTree = "<group>"; };
-		003F8F331F8D012C004BC936 /* UserDetails+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UserDetails+CoreDataProperties.m"; path = "DataModels/UserDetails+CoreDataProperties.m"; sourceTree = "<group>"; };
-		003F8F341F8D012C004BC936 /* Message+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Message+CoreDataClass.h"; path = "DataModels/Message+CoreDataClass.h"; sourceTree = "<group>"; };
-		003F8F351F8D012C004BC936 /* Message+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Message+CoreDataClass.m"; path = "DataModels/Message+CoreDataClass.m"; sourceTree = "<group>"; };
-		003F8F361F8D012C004BC936 /* Message+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Message+CoreDataProperties.h"; path = "DataModels/Message+CoreDataProperties.h"; sourceTree = "<group>"; };
-		003F8F371F8D012C004BC936 /* Message+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Message+CoreDataProperties.m"; path = "DataModels/Message+CoreDataProperties.m"; sourceTree = "<group>"; };
+		003F8F491F8DE926004BC936 /* ChatTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatTableViewCell.h; sourceTree = "<group>"; };
+		003F8F4A1F8DE926004BC936 /* ChatTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatTableViewCell.m; sourceTree = "<group>"; };
+		003F8F4B1F8DE926004BC936 /* ChatTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatTableViewCell.xib; sourceTree = "<group>"; };
+		003F8F4E1F8E37AA004BC936 /* UserDetails+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UserDetails+CoreDataClass.h"; path = "DataModels/UserDetails+CoreDataClass.h"; sourceTree = "<group>"; };
+		003F8F4F1F8E37AA004BC936 /* UserDetails+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UserDetails+CoreDataClass.m"; path = "DataModels/UserDetails+CoreDataClass.m"; sourceTree = "<group>"; };
+		003F8F501F8E37AA004BC936 /* UserDetails+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UserDetails+CoreDataProperties.h"; path = "DataModels/UserDetails+CoreDataProperties.h"; sourceTree = "<group>"; };
+		003F8F511F8E37AA004BC936 /* UserDetails+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UserDetails+CoreDataProperties.m"; path = "DataModels/UserDetails+CoreDataProperties.m"; sourceTree = "<group>"; };
+		003F8F521F8E37AA004BC936 /* Message+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Message+CoreDataClass.h"; path = "DataModels/Message+CoreDataClass.h"; sourceTree = "<group>"; };
+		003F8F531F8E37AA004BC936 /* Message+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Message+CoreDataClass.m"; path = "DataModels/Message+CoreDataClass.m"; sourceTree = "<group>"; };
+		003F8F541F8E37AA004BC936 /* Message+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Message+CoreDataProperties.h"; path = "DataModels/Message+CoreDataProperties.h"; sourceTree = "<group>"; };
+		003F8F551F8E37AA004BC936 /* Message+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Message+CoreDataProperties.m"; path = "DataModels/Message+CoreDataProperties.m"; sourceTree = "<group>"; };
+		003F8F5E1F8E3DC8004BC936 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataManager.h; path = DataModels/DataManager.h; sourceTree = "<group>"; };
+		003F8F5F1F8E3DC8004BC936 /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataManager.m; path = DataModels/DataManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +123,10 @@
 		003F8EF81F8CEE42004BC936 /* DemoApp */ = {
 			isa = PBXGroup;
 			children = (
-				003F8F2F1F8D00EF004BC936 /* DataModel */,
+				003F8F5A1F8E37DC004BC936 /* DataModels */,
+				003F8F491F8DE926004BC936 /* ChatTableViewCell.h */,
+				003F8F4A1F8DE926004BC936 /* ChatTableViewCell.m */,
+				003F8F4B1F8DE926004BC936 /* ChatTableViewCell.xib */,
 				003F8EFC1F8CEE42004BC936 /* AppDelegate.h */,
 				003F8EFD1F8CEE42004BC936 /* AppDelegate.m */,
 				003F8EFF1F8CEE42004BC936 /* ViewController.h */,
@@ -156,19 +167,21 @@
 			path = DemoAppUITests;
 			sourceTree = "<group>";
 		};
-		003F8F2F1F8D00EF004BC936 /* DataModel */ = {
+		003F8F5A1F8E37DC004BC936 /* DataModels */ = {
 			isa = PBXGroup;
 			children = (
-				003F8F301F8D012C004BC936 /* UserDetails+CoreDataClass.h */,
-				003F8F311F8D012C004BC936 /* UserDetails+CoreDataClass.m */,
-				003F8F321F8D012C004BC936 /* UserDetails+CoreDataProperties.h */,
-				003F8F331F8D012C004BC936 /* UserDetails+CoreDataProperties.m */,
-				003F8F341F8D012C004BC936 /* Message+CoreDataClass.h */,
-				003F8F351F8D012C004BC936 /* Message+CoreDataClass.m */,
-				003F8F361F8D012C004BC936 /* Message+CoreDataProperties.h */,
-				003F8F371F8D012C004BC936 /* Message+CoreDataProperties.m */,
+				003F8F4E1F8E37AA004BC936 /* UserDetails+CoreDataClass.h */,
+				003F8F4F1F8E37AA004BC936 /* UserDetails+CoreDataClass.m */,
+				003F8F501F8E37AA004BC936 /* UserDetails+CoreDataProperties.h */,
+				003F8F511F8E37AA004BC936 /* UserDetails+CoreDataProperties.m */,
+				003F8F521F8E37AA004BC936 /* Message+CoreDataClass.h */,
+				003F8F531F8E37AA004BC936 /* Message+CoreDataClass.m */,
+				003F8F541F8E37AA004BC936 /* Message+CoreDataProperties.h */,
+				003F8F551F8E37AA004BC936 /* Message+CoreDataProperties.m */,
+				003F8F5E1F8E3DC8004BC936 /* DataManager.h */,
+				003F8F5F1F8E3DC8004BC936 /* DataManager.m */,
 			);
-			name = DataModel;
+			name = DataModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				003F8F0C1F8CEE42004BC936 /* LaunchScreen.storyboard in Resources */,
+				003F8F4D1F8DE926004BC936 /* ChatTableViewCell.xib in Resources */,
 				003F8F091F8CEE42004BC936 /* Assets.xcassets in Resources */,
 				003F8F041F8CEE42004BC936 /* Main.storyboard in Resources */,
 			);
@@ -307,14 +321,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				003F8F571F8E37AA004BC936 /* UserDetails+CoreDataProperties.m in Sources */,
+				003F8F601F8E3DC8004BC936 /* DataManager.m in Sources */,
 				003F8F011F8CEE42004BC936 /* ViewController.m in Sources */,
-				003F8F3A1F8D012C004BC936 /* Message+CoreDataClass.m in Sources */,
-				003F8F381F8D012C004BC936 /* UserDetails+CoreDataClass.m in Sources */,
-				003F8F391F8D012C004BC936 /* UserDetails+CoreDataProperties.m in Sources */,
 				003F8EFE1F8CEE42004BC936 /* AppDelegate.m in Sources */,
+				003F8F591F8E37AA004BC936 /* Message+CoreDataProperties.m in Sources */,
+				003F8F581F8E37AA004BC936 /* Message+CoreDataClass.m in Sources */,
+				003F8F4C1F8DE926004BC936 /* ChatTableViewCell.m in Sources */,
 				003F8F071F8CEE42004BC936 /* DemoApp.xcdatamodeld in Sources */,
 				003F8EFB1F8CEE42004BC936 /* main.m in Sources */,
-				003F8F3B1F8D012C004BC936 /* Message+CoreDataProperties.m in Sources */,
+				003F8F561F8E37AA004BC936 /* UserDetails+CoreDataClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -552,6 +568,7 @@
 				003F8F281F8CEE43004BC936 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		003F8F291F8CEE43004BC936 /* Build configuration list for PBXNativeTarget "DemoAppTests" */ = {
 			isa = XCConfigurationList;
@@ -560,6 +577,7 @@
 				003F8F2B1F8CEE43004BC936 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		003F8F2C1F8CEE43004BC936 /* Build configuration list for PBXNativeTarget "DemoAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -568,6 +586,7 @@
 				003F8F2E1F8CEE43004BC936 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

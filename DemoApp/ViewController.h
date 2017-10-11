@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DataManager.h"
+#import "Message+CoreDataClass.h"
+@interface ViewController : UIViewController <UITableViewDelegate,UITableViewDataSource>
 
-@interface ViewController : UIViewController
-
+@property (weak, nonatomic) IBOutlet UITableView *chatTableView;
 
 @end
 
