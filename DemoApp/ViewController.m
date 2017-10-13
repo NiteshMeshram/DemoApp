@@ -47,6 +47,9 @@ NSArray *tableData;
     [[DataManager sharedInstance] saveUserId:@"1" userName:@"Nitesh"];
     
     
+    
+    
+    
 //
 }
 
@@ -104,7 +107,25 @@ NSArray *tableData;
 
     [[DataManager sharedInstance] saveMessage:[tableData objectAtIndex:[self getRandomNumber]] userID:@"1" completion:^(BOOL b, Message *msg) {
         NSLog(@"Data Saved in DB");
+        
+         [self performSelector:@selector(getMsg) withObject:self afterDelay:5.0 ];
+        
     }];
 
+}
+
+-(void)getMsg{
+
+    NSArray *allMessages =  [[DataManager sharedInstance] getAllMessages];
+    
+//    Message *msg = (Message *)[allMessages objectAtIndex:0];
+    
+    
+    for (Message *msg in allMessages) {
+        NSLog(@"msg ==> %@, msg.dateTime = %@",msg.messageDescription,msg.dateTime);
+    }
+    
+//    NSLog(@"msg ==> %@",msg);
+//    NSLog(@"msg ==> %@",msg.messageDescription);
 }
 @end

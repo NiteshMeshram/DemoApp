@@ -115,17 +115,17 @@
     
     [objMessage setValue:message forKey:@"messageDescription"];
     
-    if ([userID isEqualToString:@"1"])
+    if ([userID isEqualToString:@"2"])
     {
         
         [objMessage setValue:userID forKey:@"senderId"];
-        [objMessage setValue:@"2" forKey:@"receiverId"];
+        [objMessage setValue:@"1" forKey:@"receiverId"];
         
     }
-    else{ // User 2
+    else{ // System User
         
-        [objMessage setValue:@"2" forKey:@"senderId"];
-        [objMessage setValue:userID forKey:@"receiverId"];
+        [objMessage setValue:userID forKey:@"senderId"];
+        [objMessage setValue:@"2" forKey:@"receiverId"];
     }
     
     
@@ -191,6 +191,35 @@
     }
     return nil;
     
+}
+
+-(NSArray *)getAllMessages{
+
+    NSArray *fetchedObjects;
+    _managedObjectContext = self.managedObjectContext;
+    NSFetchRequest *fetch = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"Message"  inManagedObjectContext: _managedObjectContext];
+    [fetch setEntity:entityDescription];
+//    [fetch setPredicate:[NSPredicate predicateWithFormat:@"userId = %@",userId]];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"dateTime" ascending:TRUE];
+    NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
+    [fetch setSortDescriptors:sortDescriptors];
+    NSError * error = nil;
+    fetchedObjects = [_managedObjectContext executeFetchRequest:fetch error:&error];
+    if (fetchedObjects.count>0) {
+        NSLog(@"User Exist in DB");
+        return fetchedObjects;
+        
+//        NSLog(@"getAllMessages => %@",[fetchedObjects objectAtIndex:0]);
+//        NSLog(@"getAllMessages => %@",[fetchedObjects objectAtIndex:1]);
+        
+//        for (Message *msg in fetchedObjects)
+//        {
+//            NSLog(@"Message Details => %@", msg.messageDescription);
+//        }
+        
+    }
+    return nil;
 }
 
 

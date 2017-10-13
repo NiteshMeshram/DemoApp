@@ -27,5 +27,8 @@
 -(void)saveUserId:(NSString *)userId userName:(NSString *)userName;
 
 + (DataManager*)sharedInstance;
+
 - (void)saveContext;
+
+-(NSArray *)getAllMessages;
 @end
