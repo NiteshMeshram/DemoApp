@@ -13,5 +13,8 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *chatTableView;
 
+- (IBAction)postMessage:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextView *messageTextView;
+
 @end
 

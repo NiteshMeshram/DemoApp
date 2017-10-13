@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "ChatTableViewCell.h"
+#include <stdlib.h>
 @interface ViewController ()
 
 @end
@@ -18,7 +19,22 @@ NSArray *tableData;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-        tableData = [NSArray arrayWithObjects:@"Egg Benedict", @" Mushroom Risotto  Mushroom Risotto  Mushroom Risotto  Mushroom Risotto  Mushroom Risotto  Mushroom Risotto  Mushroom Risotto  Mushroom Risotto  Mushroom Risotto  Mushroom Risotto  Mushroom Risotto  Mushroom Risotto  Mushroom Risotto  Mushroom Risotto  Mushroom Risotto  Mushroom Risotto  Mushroom Risotto  Mushroom Risotto  Mushroom Risotto  Mushroom Risotto  Mushroom Risotto  Mushroom Risotto ", @"Full Breakfast", @"Hamburger", @"Ham and Egg Sandwich", @"Creme Brelee", @"White Chocolate Donut", @"Starbucks Coffee", @"Vegetable Curry", @"Instant Noodle with Egg", @"Noodle with BBQ Pork", @"Japanese Noodle with Pork", @"Green Tea", @"Thai Shrimp Cake", @"Angry Birds Cake", @"Ham and Cheese Panini", nil];
+        tableData = [NSArray arrayWithObjects:@"Hi",
+                     @" How are you?",
+                     @"What's going on.",
+                     @"I am good",
+                     @"Weekend started",
+                     @"I am going to wath FIFA",
+                     @"White Chocolate Donut",
+                     @"Starbucks Coffee",
+                     @"Vegetable Curry",
+                     @"Instant Noodle with Egg",
+                     @"Noodle with BBQ Pork",
+                     @"Japanese Noodle with Pork",
+                     @"Green Tea",
+                     @"Thai Shrimp Cake",
+                     @"Angry Birds Cake",
+                     @"Ham and Cheese Panini", nil];
     
     self.title = @"Demo App";
     
@@ -27,19 +43,11 @@ NSArray *tableData;
     self.chatTableView.rowHeight = UITableViewAutomaticDimension;
     self.chatTableView.estimatedRowHeight = 50;
     
-//    Message *objMessag = [[Message alloc] init];
-    
-//    objMessag.messageDescription = @"Hello 1st Message";
-//    [objMessag setMessageDescription:@"Hello 1st Message"];
-    
-
-    
-    [[DataManager sharedInstance] saveMessageWithCompletion:^(BOOL b, Message *msg) {
-        NSLog(@"Data Saved in DB");
-    }];
+    [[DataManager sharedInstance] saveUserId:@"1" userName:@"System"];
+    [[DataManager sharedInstance] saveUserId:@"1" userName:@"Nitesh"];
     
     
-    
+//
 }
 
 
@@ -73,6 +81,30 @@ NSArray *tableData;
      return cell;
 }
 
+-(int)getRandomNumber{
+    
+    NSUInteger randomNumber = arc4random_uniform((int)tableData.count);
+    
+    NSLog(@"randomNumber => %lu",(unsigned long)randomNumber);
+    
+    return (int)randomNumber;
+}
 
+- (IBAction)postMessage:(id)sender {
+    
+    [[DataManager sharedInstance] saveMessage:self.messageTextView.text userID:@"2" completion:^(BOOL b, Message *msg) {
+         NSLog(@"Data Saved in DB");
+        [self performSelector:@selector(randomMessageFromSystem) withObject:self afterDelay:5.0 ];
+    }];
 
+    
+}
+
+-(void)randomMessageFromSystem{
+
+    [[DataManager sharedInstance] saveMessage:[tableData objectAtIndex:[self getRandomNumber]] userID:@"1" completion:^(BOOL b, Message *msg) {
+        NSLog(@"Data Saved in DB");
+    }];
+
+}
 @end

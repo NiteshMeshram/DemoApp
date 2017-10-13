@@ -2,7 +2,7 @@
 //  Message+CoreDataProperties.m
 //  DemoApp
 //
-//  Created by Nitesh Meshram on 10/11/17.
+//  Created by Nitesh Meshram on 10/12/17.
 //  Copyright © 2017 V2Solutions. All rights reserved.
 //
 

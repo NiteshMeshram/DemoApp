@@ -21,8 +21,10 @@
 @property (strong, nonatomic) NSPersistentStoreCoordinator  *persistentStoreCoordinator;
 + (void)prepareDataStack;
 
--(void)saveMessageWithCompletion:(void (^)(BOOL, Message *))completion;
+-(void)saveMessage:(NSString *)message userID:(NSString *)userID completion:(void (^)(BOOL, Message *))completion;
 
+-(UserDetails *)checkUserExist:(NSString *)userId;
+-(void)saveUserId:(NSString *)userId userName:(NSString *)userName;
 
 + (DataManager*)sharedInstance;
 - (void)saveContext;

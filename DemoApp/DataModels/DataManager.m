@@ -99,16 +99,44 @@
     }
 }
 
--(void)saveMessageWithCompletion:(void (^)(BOOL, Message *))completion {
+-(void)saveMessage:(NSString *)message userID:(NSString *)userID completion:(void (^)(BOOL, Message *))completion {
     
     _managedObjectContext = self.managedObjectContext;
     NSManagedObject *objMessage = [NSEntityDescription insertNewObjectForEntityForName:@"Message" inManagedObjectContext:_managedObjectContext];
-    [objMessage  setValue:@"1st Message" forKey:@"messageDescription"];
+    
+    NSDateFormatter *messageDateFormatter = [[NSDateFormatter alloc] init];
+    [messageDateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss.S"]; // for example
+    NSDate *itsDate = [NSDate date];
+    [objMessage setValue:itsDate forKey:@"dateTime"];
+    
+    NSString *messageId = [[NSUUID UUID] UUIDString];
+    [objMessage setValue:messageId forKey:@"id"];
+    
+    
+    [objMessage setValue:message forKey:@"messageDescription"];
+    
+    if ([userID isEqualToString:@"1"])
+    {
+        
+        [objMessage setValue:userID forKey:@"senderId"];
+        [objMessage setValue:@"2" forKey:@"receiverId"];
+        
+    }
+    else{ // User 2
+        
+        [objMessage setValue:@"2" forKey:@"senderId"];
+        [objMessage setValue:userID forKey:@"receiverId"];
+    }
+    
+    
+    
+    
+    
     NSError *error = nil;
     if ([_managedObjectContext save:&error]) {
         NSLog(@"Message saved");
         completion(YES, nil);
-
+        
     }
     else{
         NSLog(@"Error occured while Message saving");
@@ -116,5 +144,55 @@
     }
     
 }
+
+-(void)saveUserId:(NSString *)userId userName:(NSString *)userName
+{
+  
+    
+    if ([[DataManager sharedInstance] checkUserExist:userId]) {
+        NSLog(@"User Exist in DB");
+    }
+    
+    else {
+        
+        NSManagedObject *objUser = [NSEntityDescription insertNewObjectForEntityForName:@"UserDetails" inManagedObjectContext:_managedObjectContext];
+        
+        [objUser setValue:userId forKey:@"userId"];
+        [objUser setValue:userName forKey:@"userName"];
+        
+        NSError *error = nil;
+        if ([_managedObjectContext save:&error]) {
+            NSLog(@"UserDetails saved");
+            //            completion(YES, nil);
+            
+        }
+        else{
+            NSLog(@"Error occured while UserDetails saving");
+            //            completion(NO, nil);
+        }
+        
+    }
+}
+
+-(UserDetails *)checkUserExist:(NSString *)userId {
+    
+    NSArray *fetchedObjects;
+    _managedObjectContext = self.managedObjectContext;
+    NSFetchRequest *fetch = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"UserDetails"  inManagedObjectContext: _managedObjectContext];
+    [fetch setEntity:entityDescription];
+    [fetch setPredicate:[NSPredicate predicateWithFormat:@"userId = %@",userId]];
+    NSError * error = nil;
+    fetchedObjects = [_managedObjectContext executeFetchRequest:fetch error:&error];
+    if (fetchedObjects.count>0) {
+        NSLog(@"User Exist in DB");
+        return [fetchedObjects objectAtIndex:0];
+        
+    }
+    return nil;
+    
+}
+
+
 
 @end

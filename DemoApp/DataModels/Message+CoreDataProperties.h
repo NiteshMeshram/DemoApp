@@ -2,7 +2,7 @@
 //  Message+CoreDataProperties.h
 //  DemoApp
 //
-//  Created by Nitesh Meshram on 10/11/17.
+//  Created by Nitesh Meshram on 10/12/17.
 //  Copyright © 2017 V2Solutions. All rights reserved.
 //
 
@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSFetchRequest<Message *> *)fetchRequest;
 
-@property (nullable, nonatomic, copy) NSString *dateTime;
+@property (nullable, nonatomic, copy) NSDate *dateTime;
 @property (nullable, nonatomic, copy) NSString *id;
 @property (nullable, nonatomic, copy) NSString *messageDescription;
 @property (nullable, nonatomic, copy) NSString *receiverId;
