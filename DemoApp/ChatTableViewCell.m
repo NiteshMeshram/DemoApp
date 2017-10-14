@@ -63,29 +63,13 @@
             [self.messageDesc setTextAlignment:NSTextAlignmentRight];
             [self.messageDesc setTextColor:[UIColor blueColor]];
             
-            
-
-            
-//            self.messageDesc.layer.borderColor = [UIColor grayColor].CGColor;
-//            self.messageDesc.layer.borderWidth = 4.0;
-//            self.messageDesc.layer.masksToBounds = YES;
-//            self.messageDesc.layer.cornerRadius = 5.0;
-            
-            
-            
-            
             break;
             
         case userStyleReceiver:
 
             [self.messageDesc setTextAlignment:NSTextAlignmentLeft];
             [self.messageDesc setTextColor:[UIColor blackColor]];
-            
-//            self.messageDesc.layer.borderColor = [UIColor cyanColor].CGColor;
-//            self.messageDesc.layer.borderWidth = 4.0;
-//            self.messageDesc.layer.masksToBounds = YES;
-//            self.messageDesc.layer.cornerRadius = 5.0;
-            
+
             break;
             
         default:

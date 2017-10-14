@@ -164,9 +164,7 @@ NSArray *tableData;
         NSLog(@"Message Saved in DB");
         
         [activeMessage addObject:message];
-//         [self performSelector:@selector(getMsg) withObject:self afterDelay:5.0 ];
-        
-//        self.allMessageArray = (NSMutableArray*) [[DataManager sharedInstance] getAllMessages];
+
         
     }];
     
