@@ -494,7 +494,7 @@
 				DEVELOPMENT_TEAM = X5E35DL2Y9;
 				INFOPLIST_FILE = DemoApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.v2solutionsinc.DemoApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.niteshm.DemoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -506,7 +506,7 @@
 				DEVELOPMENT_TEAM = X5E35DL2Y9;
 				INFOPLIST_FILE = DemoApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.v2solutionsinc.DemoApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.niteshm.DemoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -518,7 +518,7 @@
 				DEVELOPMENT_TEAM = X5E35DL2Y9;
 				INFOPLIST_FILE = DemoAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.v2solutionsinc.DemoAppTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.niteshm.DemoAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DemoApp.app/DemoApp";
 			};
@@ -531,7 +531,7 @@
 				DEVELOPMENT_TEAM = X5E35DL2Y9;
 				INFOPLIST_FILE = DemoAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.v2solutionsinc.DemoAppTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.niteshm.DemoAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DemoApp.app/DemoApp";
 			};
@@ -543,7 +543,7 @@
 				DEVELOPMENT_TEAM = X5E35DL2Y9;
 				INFOPLIST_FILE = DemoAppUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.v2solutionsinc.DemoAppUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.niteshm.DemoAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_TARGET_NAME = DemoApp;
 			};
@@ -555,7 +555,7 @@
 				DEVELOPMENT_TEAM = X5E35DL2Y9;
 				INFOPLIST_FILE = DemoAppUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.v2solutionsinc.DemoAppUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.niteshm.DemoAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_TARGET_NAME = DemoApp;
 			};

@@ -3,7 +3,7 @@
 //  DemoApp
 //
 //  Created by Nitesh Meshram on 10/13/17.
-//  Copyright © 2017 V2Solutions. All rights reserved.
+//  Copyright © 2017 Nitesh M. All rights reserved.
 //
 
 #import "UserDetails+CoreDataClass.h"
