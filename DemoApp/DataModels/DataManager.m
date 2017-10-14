@@ -2,7 +2,7 @@
 //  DataManager.m
 //  DemoApp
 //
-//  Created by Nitesh Meshram on 10/11/17.
+//  Created by Nitesh Meshram on 10/13/17.
 //  Copyright © 2017 V2Solutions. All rights reserved.
 //
 
@@ -102,7 +102,7 @@
 -(void)saveMessage:(NSString *)message userID:(NSString *)userID completion:(void (^)(BOOL, Message *))completion {
     
     _managedObjectContext = self.managedObjectContext;
-    NSManagedObject *objMessage = [NSEntityDescription insertNewObjectForEntityForName:@"Message" inManagedObjectContext:_managedObjectContext];
+    Message *objMessage = [NSEntityDescription insertNewObjectForEntityForName:@"Message" inManagedObjectContext:_managedObjectContext];
     
     NSDateFormatter *messageDateFormatter = [[NSDateFormatter alloc] init];
     [messageDateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss.S"]; // for example
@@ -135,7 +135,7 @@
     NSError *error = nil;
     if ([_managedObjectContext save:&error]) {
         NSLog(@"Message saved");
-        completion(YES, nil);
+        completion(YES, objMessage);
         
     }
     else{
